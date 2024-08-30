@@ -9,6 +9,7 @@ import Courses from "./pages/courses/Courses";
 import Coaches from "./pages/coaches/Coaches";
 import SetUpGoal from "./pages/setUpGoal/SetUpGoal";
 import Reports from "./pages/reports/Reports";
+import AnnotatedVideos from "./pages/annotatedVideos/AnnotatedVideos";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/coaches" element={<Coaches />} />
             <Route path="/setupgoal" element={<SetUpGoal />} />
             <Route path="/reports" element={<Reports />} />
+            <Route path="/annotatedvideos" element={<AnnotatedVideos />} />
           </Routes>
         </div>
       </ChakraProvider>
