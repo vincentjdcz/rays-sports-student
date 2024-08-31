@@ -1,5 +1,5 @@
-import { Avatar, Box, Card, CardHeader, Flex, Heading, IconButton, Text} from '@chakra-ui/react'
-import { BsThreeDotsVertical } from 'react-icons/bs';
+import { Avatar, Box, Card, CardHeader, Flex, Heading} from '@chakra-ui/react'
+
 export function CoachesContainerCard() {
     return (
 <Card maxW='md' w='sm' borderRadius='0' border='1px' borderColor='gray.200'>

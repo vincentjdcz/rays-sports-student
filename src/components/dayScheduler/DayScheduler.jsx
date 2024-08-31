@@ -1,7 +1,28 @@
 
+import {
+  useDisclosure,
+} from "@chakra-ui/react";
+import RightDrawer from "./RightDrawer";
+import { useState } from "react";
+
+
 
 export function DayScheduler() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [headerColour, setHeaderColour] = useState("white");
+  
+    const handleOpen = (colour) => {
+        return () => {
+
+            setHeaderColour(colour)
+            console.log("color: ", colour);
+            console.log("headerColour: ", headerColour);
+            onOpen();
+        }
+        
+    }
     return (
+        <>
         <div className="grid grid-cols grid-rows-18 gap-0 w-full mt-4" style={{gridTemplateColumns: "min-content auto", gridTemplateRows: "repeat(17, 40px)"}}>
             <div className="col-start-1 col-end-2 mb-0 -mt-3 row-start-1 row-end-2">6&nbsp;am</div>
             <div className="col-start-2 col-end-3 mb-0 row-start-1 row-end-2"><hr className="min-w-full h-2"/></div>
@@ -54,17 +75,12 @@ export function DayScheduler() {
             <div className="col-start-1 col-end-2 mb-0 -mt-3 row-start-17 row-end-18">10&nbsp;pm</div>
             <div className="col-start-2 col-end-3 mb-0 row-start-17 row-end-18"><hr className="min-w-full h-2"/></div>
 
-            <div className="col-start-2 col-end-3 mb-0 row-start-9 row-end-11 bg-red-400 z-99 border rounded-2xl">test</div>
-
-            
-            
-            
-        
-           
-
-           
+            <div className="col-start-2 col-end-3 mb-0 row-start-9 row-end-11 bg-red-400 z-99 border rounded-2xl" onClick={handleOpen("bg-red-400")}>test</div>       
 
         </div>
+        <RightDrawer isOpen={isOpen} onClose={onClose} headerColour={headerColour}/>
+        </>
+        
     )
 }
 
