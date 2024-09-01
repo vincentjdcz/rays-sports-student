@@ -4,6 +4,7 @@ import {
 } from "@chakra-ui/react";
 import RightDrawer from "./RightDrawer";
 import { useState } from "react";
+import ScheduleItem from "./ScheduleItem";
 
 
 
@@ -75,8 +76,8 @@ export function DayScheduler() {
             <div className="col-start-1 col-end-2 mb-0 -mt-3 row-start-17 row-end-18">10&nbsp;pm</div>
             <div className="col-start-2 col-end-3 mb-0 row-start-17 row-end-18"><hr className="min-w-full h-2"/></div>
 
-            <div className="col-start-2 col-end-3 mb-0 row-start-9 row-end-11 bg-red-400 z-99 border rounded-2xl" onClick={handleOpen("bg-red-400")}>test</div>       
-
+            <ScheduleItem timeStart="12:00pm" timeEnd="2:00pm" handleOpen={handleOpen} headerBackground="bg-red-400" scheduleItemLabel="Fundamentals of Cricket"/>
+           
         </div>
         <RightDrawer isOpen={isOpen} onClose={onClose} headerColour={headerColour}/>
         </>

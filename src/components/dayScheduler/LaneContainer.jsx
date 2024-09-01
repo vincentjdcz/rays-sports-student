@@ -3,7 +3,7 @@ import LaneContainerAthleteCard from "./LaneContainerAthleteCard";
 // eslint-disable-next-line react/prop-types
 export function LaneContainer({ laneName, laneNumber, timeslot, athletes }) {
   return (
-    <div className="mt-4">
+    <div>
       <div className="flex justify-between items-center">
         <div>
           <span className="font-semibold">{laneName}</span>

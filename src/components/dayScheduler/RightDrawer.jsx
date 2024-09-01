@@ -62,8 +62,33 @@ function RightDrawer({ isOpen, onClose, headerColour }) {
                 <span className="text-blue-500">Goal Completed</span>
               </Button>
             </div>
-            <LaneContainer laneName="Batting" laneNumber="Lane 1" timeslot="10:00 am - 10:30 am" athletes={["David", "James", "Robert", "Christopher", "William", "Matthew"]}/>
-            <LaneContainer laneName="Bowling" laneNumber="Lane 1" timeslot="10:30 am - 11:00 am" athletes={["David", "James", "Robert", "Christopher", "William"]}/>
+            <div className="flex flex-col gap-8 justify-start items-center">
+              <LaneContainer
+                laneName="Batting"
+                laneNumber="Lane 1"
+                timeslot="10:00 am - 10:30 am"
+                athletes={[
+                  "David",
+                  "James",
+                  "Robert",
+                  "Christopher",
+                  "William",
+                  "Matthew",
+                ]}
+              />
+              <LaneContainer
+                laneName="Bowling"
+                laneNumber="Lane 1"
+                timeslot="10:30 am - 11:00 am"
+                athletes={[
+                  "David",
+                  "James",
+                  "Robert",
+                  "Christopher",
+                  "William",
+                ]}
+              />
+            </div>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
