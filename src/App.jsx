@@ -16,8 +16,9 @@ function App() {
     <>
       <ChakraProvider>
         <Topnav />
-        <div className="flex">
-          <Sidebar />
+        <Sidebar />
+        <div className="inline flex ml-60">
+        
           <Routes>
             <Route path="/" element={<MySchedule />} />
             <Route path="/courses" element={<Courses />} />
