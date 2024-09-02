@@ -10,6 +10,8 @@ import Coaches from "./pages/coaches/Coaches";
 import SetUpGoal from "./pages/setUpGoal/SetUpGoal";
 import Reports from "./pages/reports/Reports";
 import AnnotatedVideos from "./pages/annotatedVideos/AnnotatedVideos";
+import Task from "./pages/task/Task";
+import Uploads from "./pages/uploads/Uploads";
 
 function App() {
   return (
@@ -17,11 +19,13 @@ function App() {
       <ChakraProvider>
         <Topnav />
         <Sidebar />
-        <div className="inline flex ml-60">
+        <div className="flex ml-60">
         
           <Routes>
             <Route path="/" element={<MySchedule />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/task" element={<Task />} />
+            <Route path="/uploads" element={<Uploads />} />
             <Route path="/coaches" element={<Coaches />} />
             <Route path="/setupgoal" element={<SetUpGoal />} />
             <Route path="/reports" element={<Reports />} />

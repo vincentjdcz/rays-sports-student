@@ -38,7 +38,7 @@ export function Sidebar() {
     
   }
   return (
-    <Card className="min-h-fit h-[100vh] w-fit max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 flex flex-col items-center fixed top-10 left-0"
+    <Card className="min-h-fit h-[100vh] w-fit max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 flex flex-col items-center fixed top-10 left-0 z-40"
 
     height="100vh"
     width="20rem" 
@@ -60,6 +60,24 @@ export function Sidebar() {
               <BookOpenIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
             <span className="text-xl  ">Course</span>
+          </div>
+        </ListItem>
+        <hr />
+        <ListItem className="hover:bg-slate-50">
+          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/task")}>
+            <ListItemPrefix>
+              <BookOpenIcon className="h-5 w-5 mr-3" />
+            </ListItemPrefix>
+            <span className="text-xl  ">Task</span>
+          </div>
+        </ListItem>
+        <hr />
+        <ListItem className="hover:bg-slate-50">
+          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/uploads")}>
+            <ListItemPrefix>
+              <BookOpenIcon className="h-5 w-5 mr-3" />
+            </ListItemPrefix>
+            <span className="text-xl  ">Uploads</span>
           </div>
         </ListItem>
         <hr />
