@@ -1,11 +1,24 @@
 import { Tr, Td } from "@chakra-ui/react";
 import { Avatar, Box, Card, CardHeader, Flex, Heading } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-export function TaskTotalAssignmentTabTableRow({coach, title, assignedOn, readDate, status, index,}) {
-  console.log;
+export function TaskTotalAssignmentTabTableRow({coach, title, assignedOn, readDate, status, index,
+}) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/task/taskDetails", {
+      state: { coach, title, assignedOn, readDate, status, index },
+    });
+  };
+
   return (
-    <Tr key={index}>
+    <Tr
+      key={index}
+      className="hover:bg-gray-200 cursor-pointer"
+      onClick={handleClick}
+    >
       <Td>
         <Card
           p={0} // Padding
@@ -15,15 +28,29 @@ export function TaskTotalAssignmentTabTableRow({coach, title, assignedOn, readDa
         >
           <CardHeader m={0}>
             <Flex spacing="0">
-              <Flex flex="1" gap="2" alignItems="center" flexWrap="wrap">
+              <Flex
+                flex="1"
+                gap="2"
+                alignItems="center"
+                flexWrap="wrap"
+                bg="transparent"
+                className="bg-transparent"
+              >
                 <Avatar
                   size="sm"
                   name="Segun Adebayo"
                   src="https://bit.ly/sage-adebayo"
+                  bg="transparent"
+                  className="bg-transparent"
                 />
 
-                <Box>
-                  <Heading size="xs" m={0}>
+                <Box bg="transparent" className="bg-transparent">
+                  <Heading
+                    size="xs"
+                    m={0}
+                    bg="transparent"
+                    className="bg-transparent"
+                  >
                     {coach}
                   </Heading>
                 </Box>
@@ -35,15 +62,23 @@ export function TaskTotalAssignmentTabTableRow({coach, title, assignedOn, readDa
       <Td>{title}</Td>
       <Td>{assignedOn}</Td>
       <Td>{readDate}</Td>
-      <Td><div className={`rounded-full flex justify-center items-center p-2 ${
-      status === "Read"
-        ? "border-2 border-green-500 p-2"
-        : "border-2 border-yellow-500 p-2"
-    }`}><span className={`${
-        status === "Read"
-          ? "text-green-500"
-          : "text-yellow-500"
-      }`}>{status}</span></div></Td>
+      <Td>
+        <div
+          className={`rounded-full flex justify-center items-center p-2 ${
+            status === "Read"
+              ? "border-2 border-green-500 p-2"
+              : "border-2 border-yellow-500 p-2"
+          }`}
+        >
+          <span
+            className={`${
+              status === "Read" ? "text-green-500" : "text-yellow-500"
+            }`}
+          >
+            {status}
+          </span>
+        </div>
+      </Td>
     </Tr>
   );
 }

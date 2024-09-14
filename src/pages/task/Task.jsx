@@ -5,7 +5,7 @@ export function Task() {
   return (
     <div className="p-5">
       <div className="text-left pl-4">
-        <span className="text-2xl font-bold">Reports</span>
+        <span className="text-2xl font-bold">My Task</span>
       </div>
 
       <div className="mt-4">

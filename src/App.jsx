@@ -12,6 +12,12 @@ import Reports from "./pages/reports/Reports";
 import AnnotatedVideos from "./pages/annotatedVideos/AnnotatedVideos";
 import Task from "./pages/task/Task";
 import Uploads from "./pages/uploads/Uploads";
+import CourseDetails from "./pages/courses/CourseDetails";
+import NewCourseDetails from "./pages/courses/NewCourseDetails";
+import NewPackageDetails from "./pages/courses/NewPackageDetails";
+import TaskDetails from "./pages/task/TaskDetails";
+import ReportsAttendanceDetails from "./pages/reports/ReportsAttendanceDetails";
+import ReportsReflectionSheetDetails from "./pages/reports/ReportsReflectionSheetDetails";
 
 function App() {
   return (
@@ -19,7 +25,7 @@ function App() {
       <ChakraProvider>
         <Topnav />
         <Sidebar />
-        <div className="flex ml-60">
+        <div className="flex ml-64 h-full">
         
           <Routes>
             <Route path="/" element={<MySchedule />} />
@@ -30,6 +36,13 @@ function App() {
             <Route path="/setupgoal" element={<SetUpGoal />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/annotatedvideos" element={<AnnotatedVideos />} />
+            <Route path="/courses/courseDetails" element={<CourseDetails />} />
+            <Route path="/courses/newCourseDetails" element={<NewCourseDetails />} />
+            <Route path="/courses/newPackageDetails" element={<NewPackageDetails />} />
+            <Route path="/task/taskDetails" element={<TaskDetails />} />
+            <Route path="/reports/reportsAttendanceDetails" element={<ReportsAttendanceDetails />} />
+            <Route path="/reports/reportsReflectionSheetDetails" element={<ReportsReflectionSheetDetails />} />
+            
           </Routes>
         </div>
       </ChakraProvider>

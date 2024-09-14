@@ -12,7 +12,7 @@ export function Coaches() {
             <div className="flex flex-start w-fit items-end content-center -mt-3">
             <Select icon={<MdArrowDropDown />} placeholder='All' className="mx-5"/>
 
-            <Searchbar/>
+            <Searchbar marginLeft={6}/>
             </div>
             <div className="flex">
                 <CoachesContainer/>

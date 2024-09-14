@@ -9,9 +9,23 @@ import {
   Text,
   Divider,
 } from "@chakra-ui/react";
-export function CourseCard() {
+import { useNavigate } from "react-router-dom";
+
+
+
+// eslint-disable-next-line react/prop-types
+export function CourseCard({courseName, duration, batches, }) {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/courses/courseDetails', {
+      state: { courseName, duration, batches }, // Passing data as state
+    });
+  }
+
   return (
-    <Card maxW="sm" boxShadow='xl'>
+    <Card maxW="sm" boxShadow='xl' cursor="pointer" onClick={handleClick}>
       <CardBody p={0}>
         <Image
           className="w-full"
@@ -21,11 +35,11 @@ export function CourseCard() {
           m={0}
         />
         <Stack mt="6" spacing="3" align="start">
-          <Heading size="md" className="ml-2">Fielding and Fitness</Heading>
+          <Heading size="md" className="ml-2">{courseName}</Heading>
           <div className="ml-2">
-            Duration: <span className="font-bold">6 months</span>
+            Duration: <span className="font-bold">{duration}</span>
             &nbsp;&nbsp;|&nbsp;&nbsp;Batches:{" "}
-            <span className="font-bold">10:00 AM-11:00 AM</span>
+            <span className="font-bold">{batches}</span>
           </div>
         </Stack>
       </CardBody>

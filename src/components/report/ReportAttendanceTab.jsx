@@ -11,7 +11,13 @@ import {
   TableCaption,
   TableContainer,
 } from "@chakra-ui/react";
+import { ReportAttendanceTabTableRow } from "./ReportAttendanceTabTableRow";
 export function ReportAttendanceTab() {
+  const tableData = [{courseName: "Course Name A", completedSessions: "30", present: "28", absent: "3"},
+    {courseName: "Course Name B", completedSessions: "20", present: "17", absent: "3"},
+    {courseName: "Course Name C", completedSessions: "15", present: "10", absent: "5"},
+    {courseName: "Course Name D", completedSessions: "10", present: "10", absent: "0"}
+  ]
   return (
     <div className="bg-white w-full h-full">
       <div className="w-48">
@@ -33,30 +39,7 @@ export function ReportAttendanceTab() {
               </Tr>
             </Thead>
             <Tbody>
-              <Tr>
-                <Td>Course Name A</Td>
-                <Td isNumeric>30</Td>
-                <Td isNumeric>28</Td>
-                <Td isNumeric>3</Td>
-              </Tr>
-              <Tr>
-                <Td>Course Name B</Td>
-                <Td isNumeric>20</Td>
-                <Td isNumeric>17</Td>
-                <Td isNumeric>3</Td>
-              </Tr>
-              <Tr>
-                <Td>Course Name C</Td>
-                <Td isNumeric>15</Td>
-                <Td isNumeric>10</Td>
-                <Td isNumeric>5</Td>
-              </Tr>
-              <Tr>
-                <Td>Course Name D</Td>
-                <Td isNumeric>10</Td>
-                <Td isNumeric>10</Td>
-                <Td isNumeric>0</Td>
-              </Tr>
+              {tableData.map((tr, index) => (<ReportAttendanceTabTableRow key={index} courseName={tr.courseName} completedSessions={tr.completedSessions} present={tr.present} absent={tr.absent}/>))}
             </Tbody>
 
               
