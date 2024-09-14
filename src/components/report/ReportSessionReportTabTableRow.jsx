@@ -216,10 +216,10 @@ export function ReportSessionReportTabTableRow({courseName, courseDuration, batt
                 {data.map((data, index) => (
                   <Tr key={index}>
                     <Td>{data.date}</Td>
-                    <Td className={`${data.batting === "Not Assigned" ? "text-red-900 font-semibold" : ""}`}>{data.batting}</Td>
-                    <Td className={`${data.bowling === "Not Assigned" ? "text-red-900 font-semibold" : ""}`}>{data.bowling}</Td>
-                    <Td className={`${data.fielding === "Not Assigned" ? "text-red-900 font-semibold" : ""}`}>{data.fielding}</Td>
-                    <Td className={`${data.fitness === "Not Assigned" ? "text-red-900 font-semibold" : ""}`}>{data.fitness}</Td>
+                    <Td className={`${data.batting === "Not Assigned" ? "text-red-700 font-semibold" : ""}`}>{data.batting}</Td>
+                    <Td className={`${data.bowling === "Not Assigned" ? "text-red-700 font-semibold" : ""}`}>{data.bowling}</Td>
+                    <Td className={`${data.fielding === "Not Assigned" ? "text-red-700 font-semibold" : ""}`}>{data.fielding}</Td>
+                    <Td className={`${data.fitness === "Not Assigned" ? "text-red-700 font-semibold" : ""}`}>{data.fitness}</Td>
                   </Tr>
                  
                 ))}
