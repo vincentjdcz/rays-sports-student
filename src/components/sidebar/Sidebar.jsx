@@ -1,20 +1,13 @@
 import {
   Card,
-  Typography,
   List,
   ListItem,
   ListItemPrefix,
-  ListItemSuffix,
-  Chip,
+
 } from "@material-tailwind/react";
 import {
   CalendarIcon,
   BookOpenIcon,
-  ShoppingBagIcon,
-  UserCircleIcon,
-  Cog6ToothIcon,
-  InboxIcon,
-  PowerIcon,
   UserGroupIcon,
   ClipboardIcon,
   FlagIcon,
@@ -38,15 +31,15 @@ export function Sidebar() {
     
   }
   return (
-    <Card className="min-h-fit h-[100vh] w-fit max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 flex flex-col items-center fixed top-10 left-0 z-40"
+    <Card className="h-screen w-fit max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 flex flex-col items-center fixed top-10 left-0 z-40 overflow-y-auto"
 
     height="100vh"
     width="20rem" 
-    overflowY="auto">
+    >
       <ProfileCard className="w-full" />
       <List className="flex flex-col w-full">
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/")}>
+          <div className=" flex items-center justify-between py-0" onClick={handleNavigate("/")}>
             <ListItemPrefix>
               <CalendarIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -55,7 +48,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/courses")}>
+          <div className=" flex items-center justify-between py-0" onClick={handleNavigate("/courses")}>
             <ListItemPrefix>
               <BookOpenIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -64,7 +57,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/task")}>
+          <div className=" flex items-center justify-between py-0" onClick={handleNavigate("/task")}>
             <ListItemPrefix>
               <BookOpenIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -73,7 +66,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/uploads")}>
+          <div className=" flex items-center justify-between py-0" onClick={handleNavigate("/uploads")}>
             <ListItemPrefix>
               <BookOpenIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -82,7 +75,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/coaches")}>
+          <div className=" flex items-center justify-between py-0" onClick={handleNavigate("/coaches")}>
             <ListItemPrefix>
               <UserGroupIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -91,7 +84,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/reports")}>
+          <div className=" flex items-center justify-between py-0" onClick={handleNavigate("/reports")}>
             <ListItemPrefix>
               <ClipboardIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -100,7 +93,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/setupgoal")}>
+          <div className=" flex items-center justify-between py-0" onClick={handleNavigate("/setupgoal")}>
             <ListItemPrefix>
               <FlagIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -109,7 +102,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2">
+          <div className=" flex items-center justify-between py-0">
             <ListItemPrefix>
               <ChatBubbleBottomCenterTextIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -118,7 +111,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2">
+          <div className=" flex items-center justify-between py-0">
             <ListItemPrefix>
               <CreditCardIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -127,7 +120,7 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2" onClick={handleNavigate("/annotatedvideos")}>
+          <div className=" flex items-center justify-between py-0" onClick={handleNavigate("/annotatedvideos")}>
             <ListItemPrefix>
               <VideoCameraIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
@@ -136,11 +129,16 @@ export function Sidebar() {
         </ListItem>
         <hr />
         <ListItem className="hover:bg-slate-50">
-          <div className=" flex items-center justify-between py-2">
+          <div className=" flex items-center justify-between py-0">
             <ListItemPrefix>
               <BellAlertIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
             <span className="text-xl ">Notifications</span>
+          </div>
+        </ListItem>
+        <ListItem>
+          {/* This ListItem is just to make sure entire navbar is viewable on smaller screens when needing to scroll */}
+          <div className=" flex items-center justify-between m-6">
           </div>
         </ListItem>
       </List>

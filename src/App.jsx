@@ -2,7 +2,7 @@ import Topnav from "./components/topnav/Topnav";
 import Sidebar from "./components/sidebar/Sidebar";
 import "./App.css";
 import * as React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import MySchedule from "./pages/mySchedule/MySchedule";
 import Courses from "./pages/courses/Courses";
@@ -20,12 +20,18 @@ import ReportsAttendanceDetails from "./pages/reports/ReportsAttendanceDetails";
 import ReportsReflectionSheetDetails from "./pages/reports/ReportsReflectionSheetDetails";
 
 function App() {
+
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
   return (
     <>
       <ChakraProvider>
-        <Topnav />
-        <Sidebar />
-        <div className="flex ml-64 h-full">
+        <Topnav toggleSidebar={toggleSidebar}/>
+        {isSidebarOpen && <Sidebar /> }
+        <div className={`flex ${isSidebarOpen ? 'ml-64' : 'ml-0'} h-full overflow-auto`}>
         
           <Routes>
             <Route path="/" element={<MySchedule />} />
