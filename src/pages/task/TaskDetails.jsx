@@ -9,12 +9,12 @@ import "primereact/resources/primereact.min.css"; // PrimeReact core CSS
 import "primeicons/primeicons.css"; // PrimeIcons CSS for icons
 import TextEditorMenuBar from "../../components/textEditorMenuBar/TextEditorMenuBar";
 import "./TaskDetails.css";
-import { FileUpload } from "primereact/fileupload";
+import {} from "primereact/fileupload";
 import FileUploadWithMedia from "../../components/task/FileUploadWithMedia";
 import TaskDetailsChatContainer from "../../components/task/TaskDetailsChatContainer";
 export function TaskDetails() {
   const location = useLocation(); // Get the location object
-  const { coach, title, assignedOn, readDate, status, index } =
+  const {title,} =
     location.state || {};
   let text = "Enter your comment here...";
 
@@ -42,7 +42,7 @@ export function TaskDetails() {
           </BreadcrumbItem>
         </Breadcrumb>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-wrap">
         <div className="bg-white rounded-lg w-[700px] h-full p-8">
           <TaskDetailsChatContainer />
         </div>

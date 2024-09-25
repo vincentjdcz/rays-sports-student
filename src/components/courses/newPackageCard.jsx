@@ -24,7 +24,7 @@ import {
     }
 
     return (
-      <Card maxW="sm" boxShadow="xl" cursor="pointer" onClick={handleClick}>
+      <Card minW="2xs" maxW="sm" boxShadow="xl" cursor="pointer" onClick={handleClick}>
         <CardBody p={0}>
           <div className="relative">
             <Image

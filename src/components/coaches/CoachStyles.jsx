@@ -1,7 +1,7 @@
 
 export function CoachStyles() {
     return (
-        <div className="w-[80%] flex ml-7 mt-4 gap-32">
+        <div className=" flex mt-4 gap-12 md:gap-32 md:flex-nowrap flex-wrap w-[275px] md:w-auto">
             <div className="flex flex-col items-start">
                 <span className="text-sm font-light">Batting style</span>
                 <span className="text-base font-semibold">Right hand Bat</span>

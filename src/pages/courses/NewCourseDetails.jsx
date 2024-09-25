@@ -7,9 +7,9 @@ import { Button } from '@chakra-ui/react'
 
 export function NewCourseDetails() {
   const location = useLocation(); // Get the location object
-  const { courseName, price } = location.state || {};
+  const { courseName, } = location.state || {};
   return (
-    <div className="p-6 bg-slate-100 w-full h-[100vw] gap-6">
+    <div className="p-6 min-h-fit h-[100vw] gap-6 ">
       {/* Breadcrumb navigation */}
       <div>
         <Breadcrumb
@@ -33,10 +33,10 @@ export function NewCourseDetails() {
         </Breadcrumb>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-4 flex-wrap">
         <NewCourseDetailsCourseCard />
         <div className="flex flex-col gap-4 justify-start">
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start overflow-auto">
             <span className="font-bold text-xl ml-4">
               Select your preferred batch
             </span>
@@ -79,7 +79,7 @@ export function NewCourseDetails() {
             </form>
           </div>
 
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start overflow-auto">
             <span className="font-bold text-xl ml-4">Select one</span>
             <form className="p-4 space-y-3 bg-gray-100 rounded-lg">
               <label className="flex items-center space-x-3">

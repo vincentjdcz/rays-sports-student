@@ -25,7 +25,7 @@ export function CourseCard({courseName, duration, batches, }) {
   }
 
   return (
-    <Card maxW="sm" boxShadow='xl' cursor="pointer" onClick={handleClick}>
+    <Card minW="2xs" maxW="sm" boxShadow='xl' cursor="pointer" onClick={handleClick}>
       <CardBody p={0}>
         <Image
           className="w-full"

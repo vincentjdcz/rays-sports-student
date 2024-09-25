@@ -2,15 +2,15 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { NewCourseDetailsCourseCard } from "../../components/courses/NewCourseDetailsCourseCard";
+import {} from "../../components/courses/NewCourseDetailsCourseCard";
 import { Button } from "@chakra-ui/react";
 import NewPackageDetailsPackageCard from "../../components/courses/NewPackageDetailsPackageCard";
 
 export function NewPackageDetails() {
   const location = useLocation(); // Get the location object
-  const { packageName, price } = location.state || {};
+  const { packageName, } = location.state || {};
   return (
-    <div className="p-6 bg-slate-100 w-full h-[100vw] gap-6">
+    <div className="p-6 min-h-fit h-[100vw] gap-6">
       {/* Breadcrumb navigation */}
       <div>
         <Breadcrumb
@@ -34,7 +34,7 @@ export function NewPackageDetails() {
         </Breadcrumb>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         <NewPackageDetailsPackageCard />
         <div className="flex flex-col gap-4 justify-start">
           
@@ -43,7 +43,7 @@ export function NewPackageDetails() {
             
             <div className="flex justify-between w-full ">
               <span className="text-xl font-bold">Course Title 1</span>
-              <span>Duration: <b>6 months</b>&nbsp;&nbsp;|&nbsp;&nbsp;Batches: <b>3</b></span>
+              <span>Duration:&nbsp;<b>6&nbsp;months</b>&nbsp;&nbsp;|&nbsp;&nbsp;Batches:&nbsp;<b>3</b></span>
             </div>
             <hr className="w-full bg-gray-300 h-[1px] my-3 " />
             <span className="font-bold text-l">Select batch</span>
@@ -93,7 +93,7 @@ export function NewPackageDetails() {
             
             <div className="flex justify-between w-full ">
               <span className="text-xl font-bold">Course Title 2</span>
-              <span>Duration: <b>3 months</b>&nbsp;&nbsp;|&nbsp;&nbsp;Batches: <b>2</b></span>
+              <span>Duration:&nbsp;<b>3 months</b>&nbsp;&nbsp;|&nbsp;&nbsp;Batches:&nbsp;<b>2</b></span>
             </div>
             <hr className="w-full bg-gray-300 h-[1px] my-3 " />
             <span className="font-bold text-l">Select batch</span>
@@ -142,7 +142,7 @@ export function NewPackageDetails() {
             
             <div className="flex justify-between w-full ">
               <span className="text-xl font-bold">Course Title 3</span>
-              <span>Duration: <b>3 months</b>&nbsp;&nbsp;|&nbsp;&nbsp;Batches: <b>3</b></span>
+              <span>Duration:&nbsp;<b>3&nbsp;months</b>&nbsp;&nbsp;|&nbsp;&nbsp;Batches:&nbsp;<b>3</b></span>
             </div>
             <hr className="w-full bg-gray-300 h-[1px] my-3 " />
             <span className="font-bold text-l">Select batch</span>

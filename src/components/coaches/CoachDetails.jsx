@@ -9,18 +9,18 @@ import CoachStyles from "./CoachStyles";
 export function CoachDetails() {
   return (
     <div className="bg-white p-4">
-      <div className="flex">
+      <div className="flex md:flex-nowrap flex-wrap w-[275px] md:w-auto">
         <CoachProfileCard />
-        <div className="flex flex-col flex-1 ">
+        <div className="flex flex-col flex-1 md:flex-nowrap flex-wrap md:ml-7">
           <CoachAbout />
           <CoachStyles />
 
-          <div className="w-[80%] flex ml-7 mt-4 gap-28"> {/*for demo purposes, gap-28 to make it align. afterward, figure out what's actually going to be on this page and how we want to lay it out */}
+          <div className=" flex  mt-4 gap-8 md:gap-28 flex-wrap"> {/*for demo purposes, gap-28 to make it align. afterward, figure out what's actually going to be on this page and how we want to lay it out */}
             <CoachLanguages />
             <CoachSpecializations />
           </div>
 
-          <div className="w-[80%] flex ml-7 mt-4 gap-28"> {/*for demo purposes, gap-28 to make it align. afterward, figure out what's actually going to be on this page and how we want to lay it out */}
+          <div className=" flex  mt-4 gap-[3.5rem] md:gap-[8.5rem]"> {/*for demo purposes, gap-28 to make it align. afterward, figure out what's actually going to be on this page and how we want to lay it out */}
           <CoachSocials/>
           <CoachLinks/>
           </div>
@@ -32,6 +32,7 @@ export function CoachDetails() {
 
 /*
 
+BEFORE
                     
             
                     

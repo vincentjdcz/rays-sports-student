@@ -12,7 +12,7 @@ export function CourseDetails() {
   const { courseName, duration, batches } = location.state || {};
 
   return (
-    <div className="pl-4 bg-slate-100 w-full h-[100vw]">
+    <div className="pl-4 bg-slate-100 overflow-auto h-[100vh] min-h-fit">
       {/* Breadcrumb navigation */}
       <div>
         <Breadcrumb
@@ -47,12 +47,12 @@ export function CourseDetails() {
 
       <div className="flex flex-col justify-start items-start gap-4">
         <span className="font-semibold">Total session summary</span>
-        <div className="flex gap-8">
+        <div className="flex gap-8 flex-wrap">
           <div className="flex flex-col items-start justify-start bg-white rounded-lg p-4">
             <span className="font-bold text-xl">4</span>
             <span className="text-gray-500">Sessions completed</span>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 w-[100vw] overflow-auto">
             <div className="flex flex-col items-start justify-start bg-white rounded-lg p-4">
               <span className="font-bold text-xl">80 min</span>
               <span className="text-gray-500">Batting</span>
@@ -73,7 +73,7 @@ export function CourseDetails() {
         </div>
         <hr className="w-full bg-gray-300 h-[1px]" />
       </div>
-      <div className="flex justify-start items-start gap-4 mt-3">
+      <div className="flex justify-start items-start gap-4 mt-3 flex-wrap">
         <div className="flex flex-col justify-start items-start gap-2">
           <span className="font-bold">Completed sessions</span>
           <Searchbar marginLeft={0} />
@@ -95,18 +95,18 @@ export function CourseDetails() {
 
         <div className="flex flex-col justify-start items-start gap-2">
           <span className="font-bold">Daily session report</span>
-          <div className="flex flex-col bg-white w-full h-fit rounded-lg p-4 gap-4">
+          <div className="flex flex-col bg-white h-fit rounded-lg p-4 gap-4 w-[600px]">
             <div className="flex gap-8">
               <div className="flex">
-                <span className="text-lg">Total session time :&nbsp;</span>
+                <span className="text-lg">Total session time&nbsp;:&nbsp;</span>
                 <span className="text-lg font-bold">1hr</span>
               </div>
               <div>
-                <span className="text-lg">Total received :&nbsp;</span>
+                <span className="text-lg">Total received&nbsp;:&nbsp;</span>
                 <span className="text-lg font-bold">45min</span>
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 w-[100vw] overflow-auto">
               <div className="p-4 rounded-md bg-slate-100 flex flex-col ">
                 <span className="text-lg font-bold">20 min</span>
                 <span>Batting</span>
@@ -126,7 +126,7 @@ export function CourseDetails() {
             </div>
             <hr className="w-full bg-gray-300 h-[1px]" />
             <span className="font-bold text-left">Player performance</span>
-            <div className="flex gap-3">
+            <div className="flex gap-3 overflow-auto">
               <div className="border-2 border-blue-300 rounded-md">
                 <img
                   className=""

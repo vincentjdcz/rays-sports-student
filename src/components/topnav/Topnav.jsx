@@ -3,7 +3,7 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 // eslint-disable-next-line react/prop-types
 const Topnav = ({ toggleSidebar }) => {
   return (
-    <div className="sticky top-0 z-50 w-full">
+    <div className="fixed top-0 z-50 w-[100vw]">
       <nav className="bg-gray-200 w-full">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">

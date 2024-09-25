@@ -1,13 +1,9 @@
 import {
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
   Image,
   Stack,
   Heading,
-  Text,
-  Divider,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -23,7 +19,7 @@ export function NewCourseCard({courseName, duration, batches, price}) {
     });
   }
   return (
-    <Card maxW="sm" boxShadow="xl" cursor="pointer" onClick={handleClick}>
+    <Card minW="2xs" maxW="sm" boxShadow="xl" cursor="pointer" onClick={handleClick}>
       <CardBody p={0}>
         <div className="relative">
           <Image

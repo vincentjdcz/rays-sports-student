@@ -121,12 +121,13 @@ export function UploadsTable() {
   return (
     <>
       <div className="bg-white w-full h-full">
-        <div className="w-full flex pr-4 items-center justify-between">
-          <div className="w-[60%] flex justify-start items-center gap-4">
+        <div className="w-full flex pr-4 items-center justify-between flex-wrap gap-4">
+          <div className="w-[60%] flex justify-start items-center gap-4 flex-wrap">
             <Select
               icon={<MdArrowDropDown />}
               placeholder="All Coach"
               className="mx-5"
+              width="4xs"
             >
               <option value="coach1">Coach Name 1</option>
               <option value="coach2">Coach Name 2</option>
@@ -137,6 +138,7 @@ export function UploadsTable() {
               icon={<MdArrowDropDown />}
               placeholder="All Year"
               className="mx-5"
+              width="4xs"
             >
               <option value="coach1">Monthly</option>
               <option value="coach2">Quarterly</option>
@@ -147,6 +149,7 @@ export function UploadsTable() {
               icon={<MdArrowDropDown />}
               placeholder="2024"
               className="mx-5"
+              width="4xs"
             />
             <span className="whitespace-nowrap ml-4">
               Total&nbsp;uploads&nbsp;-&nbsp;35
@@ -159,13 +162,14 @@ export function UploadsTable() {
             size="large"
             p={2}
             onClick={handleFileUploadClick}
+            ml={4}
           >
             Upload file
           </Button>
         </div>
         <div className="mt-4 ml-5">
           <TableContainer>
-            <Table>
+            <Table className="">
               <Thead>
                 <Tr>
                   <Th>File</Th>

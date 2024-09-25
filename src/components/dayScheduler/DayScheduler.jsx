@@ -24,7 +24,7 @@ export function DayScheduler() {
     }
     return (
         <>
-        <div className="grid grid-cols grid-rows-18 gap-0 w-full mt-4" style={{gridTemplateColumns: "min-content auto", gridTemplateRows: "repeat(17, 40px)"}}>
+        <div className="overflow-x-auto grid grid-cols grid-rows-18 gap-0 w-full mt-4 pt-4 min-w-[370px]" style={{gridTemplateColumns: "min-content auto", gridTemplateRows: "repeat(17, 40px)"}}>
             <div className="col-start-1 col-end-2 mb-0 -mt-3 row-start-1 row-end-2">6&nbsp;am</div>
             <div className="col-start-2 col-end-3 mb-0 row-start-1 row-end-2"><hr className="min-w-full h-2"/></div>
 

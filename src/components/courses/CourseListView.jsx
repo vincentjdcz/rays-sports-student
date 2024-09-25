@@ -5,7 +5,7 @@ import NewPackageCard from "./newPackageCard";
 export function CourseListView({courses, newCourses, newPackages}) {
    
     return (
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
             {courses.map((course, index) => (
                 <CourseCard key={index} courseName={course.courseName} duration={course.duration} batches={course.batches}/>
             ))}

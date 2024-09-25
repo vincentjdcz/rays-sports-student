@@ -1,7 +1,7 @@
 import { Button, ButtonGroup } from "@chakra-ui/react";
 export function CoachProfileCard() {
   return (
-    <div>
+    <div className="mb-4 md:mb-0">
       <div className="relative w-64 h-64">
         <img
           src="https://bit.ly/sage-adebayo"

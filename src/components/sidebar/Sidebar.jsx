@@ -43,7 +43,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <CalendarIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">My Schedules</span>
+            <span className="text-base sm:text-xl">My Schedules</span>
           </div>
         </ListItem>
         <hr />
@@ -52,7 +52,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <BookOpenIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">Course</span>
+            <span className="text-base sm:text-xl">Course</span>
           </div>
         </ListItem>
         <hr />
@@ -61,7 +61,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <BookOpenIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">Task</span>
+            <span className="text-base sm:text-xl">Task</span>
           </div>
         </ListItem>
         <hr />
@@ -70,7 +70,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <BookOpenIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">Uploads</span>
+            <span className="text-base sm:text-xl">Uploads</span>
           </div>
         </ListItem>
         <hr />
@@ -79,7 +79,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <UserGroupIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">Coaches</span>
+            <span className="text-base sm:text-xl">Coaches</span>
           </div>
         </ListItem>
         <hr />
@@ -88,7 +88,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <ClipboardIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">Report</span>
+            <span className="text-base sm:text-xl">Report</span>
           </div>
         </ListItem>
         <hr />
@@ -97,7 +97,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <FlagIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">Set up Goal</span>
+            <span className="text-base sm:text-xl">Set up Goal</span>
           </div>
         </ListItem>
         <hr />
@@ -106,7 +106,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <ChatBubbleBottomCenterTextIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">Chat</span>
+            <span className="text-base sm:text-xl">Chat</span>
           </div>
         </ListItem>
         <hr />
@@ -115,7 +115,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <CreditCardIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl  ">Payments</span>
+            <span className="text-base sm:text-xl">Payments</span>
           </div>
         </ListItem>
         <hr />
@@ -124,7 +124,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <VideoCameraIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl ">Annotated&nbsp;Videos</span>
+            <span className="text-base sm:text-xl">Annotated&nbsp;Videos</span>
           </div>
         </ListItem>
         <hr />
@@ -133,7 +133,7 @@ export function Sidebar() {
             <ListItemPrefix>
               <BellAlertIcon className="h-5 w-5 mr-3" />
             </ListItemPrefix>
-            <span className="text-xl ">Notifications</span>
+            <span className="text-base sm:text-xl">Notifications</span>
           </div>
         </ListItem>
         <ListItem>

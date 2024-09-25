@@ -31,13 +31,16 @@ export function UploadsTableRow({title, receiver, receiverRole, sentDate, readDa
   return (
     <>
       <Tr key={index} onClick={handleRowClick} className="cursor-pointer">
-        <Td>
-          <div className="flex justify-start items-center gap-2">
+        <Td minWidth="max-content" whiteSpace="nowrap" flexShrink={0} pr="20">
+          <div className="flex justify-start items-center gap-2 min-w-fit w-fit flex-shrink-0 p-0">
             <img src={thumbnail} />
-            <span>{title}</span>
+            <div className="w-fit min-w-fit">
+            <span className="flex-shrink-0 min-w-fit">{title}</span>
+            </div>
+            
           </div>
         </Td>
-        <Td>
+        <Td className="min-w-min">
           <Card
             p={0} // Padding
             maxW="fit-content" // Fit width to content
@@ -67,9 +70,9 @@ export function UploadsTableRow({title, receiver, receiverRole, sentDate, readDa
           </Card>
         </Td>
 
-        <Td>{sentDate}</Td>
-        <Td>{readDate}</Td>
-        <Td>
+        <Td className="min-w-min">{sentDate}</Td>
+        <Td className="min-w-min">{readDate}</Td>
+        <Td className="min-w-min">
           <div
             className={`rounded-full flex justify-center items-center p-2 ${
               status === "Read"
@@ -102,7 +105,7 @@ export function UploadsTableRow({title, receiver, receiverRole, sentDate, readDa
           />
           <hr className="w-full bg-gray-300 h-[1px]" />
           <ModalBody>
-            <div className="p-4 flex gap-2">
+            <div className="p-4 flex gap-2 md:flex-nowrap flex-wrap">
               <img
                 src="/src/assets/UploadsDetailsImage.jpg"
                 className="rounded-xl mt-2"

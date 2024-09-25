@@ -15,7 +15,7 @@ export function NewCourseDetailsCourseCard() {
   const location = useLocation(); // Get the location object
   const { courseName, price } = location.state || {};
   return (
-    <Card maxW="sm" boxShadow="xl" cursor="pointer">
+    <Card w="xs" maxW="sm" boxShadow="xl" cursor="pointer" overflow="auto">
       <CardBody p={0}>
         <div className="relative">
           <Image

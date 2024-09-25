@@ -29,9 +29,11 @@ function App() {
   return (
     <>
       <ChakraProvider>
+        <div className="w-[100vw]">
+       {/*<div className="overflow-scroll"> */} 
         <Topnav toggleSidebar={toggleSidebar}/>
         {isSidebarOpen && <Sidebar /> }
-        <div className={`flex ${isSidebarOpen ? 'ml-64' : 'ml-0'} h-full overflow-auto`}>
+        <div className={`flex ${isSidebarOpen ? 'ml-72' : 'ml-0'} h-full  mt-12`}>
         
           <Routes>
             <Route path="/" element={<MySchedule />} />
@@ -50,6 +52,8 @@ function App() {
             <Route path="/reports/reportsReflectionSheetDetails" element={<ReportsReflectionSheetDetails />} />
             
           </Routes>
+        </div>
+        {/* </div>*/}
         </div>
       </ChakraProvider>
     </>
