@@ -18,7 +18,7 @@ export function ReportsAttendanceDetails() {
         >
           <BreadcrumbItem>
             <BreadcrumbLink as={Link} to="/reports">
-              <span className="font-semibold text-2xl text-gray-500">
+              <span className="font-semibold text-base md:text-2xl text-gray-500">
                 Reports
               </span>
             </BreadcrumbLink>
@@ -26,26 +26,26 @@ export function ReportsAttendanceDetails() {
 
           <BreadcrumbItem isCurrentPage>
             <BreadcrumbLink>
-              <span className="font-bold text-2xl">Attendance | {courseName}</span>
+              <span className="font-bold text-base md:text-2xl">Attendance | {courseName}</span>
             </BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       </div>
-      <div className="flex gap-2">
-        <div className="flex flex-col items-start bg-white p-4 rounded-lg w-60 h-30">
-            <span className="text-2xl font-bold">{completedSessions}</span>
-            <span>Completed sessions</span>
+      <div className="flex gap-2 flex-wrap">
+        <div className="flex flex-col items-start bg-white p-4 rounded-lg w-40 md:w-60 h-30">
+            <span className="text-lg font-bold">{completedSessions}</span>
+            <span className="text-xs">Completed sessions</span>
         </div>
-        <div className="flex flex-col items-start bg-white p-4 rounded-lg w-60 h-30">
-            <span className="text-2xl font-bold">{present}</span>
-            <span>Present</span>
+        <div className="flex flex-col items-start bg-white p-4 rounded-lg w-40 md:w-60 h-30">
+            <span className="text-lg font-bold">{present}</span>
+            <span className="text-xs">Present</span>
         </div>
-        <div className="flex flex-col items-start bg-white p-4 rounded-lg w-60 h-30">
-            <span className="text-2xl font-bold">{absent}</span>
-            <span>Absent</span>
+        <div className="flex flex-col items-start bg-white p-4 rounded-lg w-40 md:w-60 h-30">
+            <span className="text-lg font-bold">{absent}</span>
+            <span className="text-xs">Absent</span>
         </div>
       </div>
-      <span className="text-lg">Completed classes - <b>20</b></span>
+      <span className="text-sm md:text-lg">Completed classes - <b>20</b></span>
 
       <ReportsAttendanceDetailsTable />
     </div>

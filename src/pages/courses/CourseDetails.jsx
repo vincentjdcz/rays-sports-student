@@ -12,7 +12,7 @@ export function CourseDetails() {
   const { courseName, duration, batches } = location.state || {};
 
   return (
-    <div className="pl-4 bg-slate-100 overflow-auto h-[100vh] min-h-fit">
+    <div className="pl-4 bg-slate-100 h-[100vh] min-h-fit">
       {/* Breadcrumb navigation */}
       <div>
         <Breadcrumb
@@ -95,9 +95,9 @@ export function CourseDetails() {
 
         <div className="flex flex-col justify-start items-start gap-2">
           <span className="font-bold">Daily session report</span>
-          <div className="flex flex-col bg-white h-fit rounded-lg p-4 gap-4 w-[600px]">
+          <div className="flex flex-col bg-white h-fit rounded-lg p-4 gap-4 w-[300px] md:w-[600px]">
             <div className="flex gap-8">
-              <div className="flex">
+              <div>
                 <span className="text-lg">Total session time&nbsp;:&nbsp;</span>
                 <span className="text-lg font-bold">1hr</span>
               </div>
@@ -106,7 +106,7 @@ export function CourseDetails() {
                 <span className="text-lg font-bold">45min</span>
               </div>
             </div>
-            <div className="flex gap-2 w-[100vw] overflow-auto">
+            <div className="flex gap-2 w-full overflow-auto">
               <div className="p-4 rounded-md bg-slate-100 flex flex-col ">
                 <span className="text-lg font-bold">20 min</span>
                 <span>Batting</span>
@@ -126,24 +126,24 @@ export function CourseDetails() {
             </div>
             <hr className="w-full bg-gray-300 h-[1px]" />
             <span className="font-bold text-left">Player performance</span>
-            <div className="flex gap-3 overflow-auto">
-              <div className="border-2 border-blue-300 rounded-md">
+            <div className="flex gap-3 overflow-auto w-full">
+              <div className="w-fit border-2 border-blue-300 rounded-md">
                 <img
-                  className=""
+                  className="w-auto h-auto max-w-none"
                   src="/src/assets/playerPerformance/NeedsImprovement.jpg"
                 />
               </div>
-              <div className="border-2 border-blue-300 rounded-md">
-                <img src="/src/assets/playerPerformance/Satisfactory.jpg" />
+              <div className="w-fit border-2 border-blue-300 rounded-md">
+                <img className="w-auto h-auto max-w-none" src="/src/assets/playerPerformance/Satisfactory.jpg" />
               </div>
-              <div className="border-2 border-blue-300 rounded-md">
-                <img src="/src/assets/playerPerformance/Good.jpg" />
+              <div className="w-fit border-2 border-blue-300 rounded-md">
+                <img className="w-auto h-auto max-w-none" src="/src/assets/playerPerformance/Good.jpg" />
               </div>
-              <div className="border-2 border-blue-700 rounded-md shadow-2xl">
-                <img src="/src/assets/playerPerformance/Excellent.jpg" />
+              <div className="w-fit border-2 border-blue-700 rounded-md shadow-2xl">
+                <img className="w-auto h-auto max-w-none" src="/src/assets/playerPerformance/Excellent.jpg" />
               </div>
-              <div className="border-2 border-blue-300 rounded-md">
-                <img src="/src/assets/playerPerformance/Outstanding.jpg" />
+              <div className="w-fit border-2 border-blue-300 rounded-md">
+                <img className="w-auto h-auto max-w-none" src="/src/assets/playerPerformance/Outstanding.jpg" />
               </div>
             </div>
             <hr className="w-full bg-gray-300 h-[1px] mt-2" />
@@ -156,12 +156,13 @@ export function CourseDetails() {
             <ReactAudioPlayer
               src=""
               controls
-              style={{ width: "100%" }}
+             
+              className="w-[250px] md:w-full"
             />
             <ReactAudioPlayer
               src=""
               controls
-              style={{ width: "100%" }}
+              className="w-[250px] md:w-full"
             />
             <span className="text-sm font-bold text-left">Bowling</span>
             <span className="text-left text-sm">

@@ -5,8 +5,8 @@ export function ReportsAttendanceDetailsTableRow({date, status}) {
   return (
     <>
       <Tr bg="white">
-        <Td fontSize="lg" minWidth="100px" width="200px">{date}</Td>
-        <Td fontSize="lg" minWidth="100px" width="200px">
+        <Td fontSize={{ base: "sm", md: "lg" }} minWidth="100px" width="200px">{date}</Td>
+        <Td fontSize={{ base: "sm", md: "lg" }} minWidth="100px" width="200px">
           
             <span
               className={`${

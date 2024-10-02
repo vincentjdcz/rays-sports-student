@@ -25,7 +25,7 @@ export function ReportsReflectionSheetDetails() {
 
 
   return (
-    <div className="pl-4 bg-slate-100 w-full h-[100vw]">
+    <div className="pl-4 bg-slate-100 w-full h-[100vw] pt-8 min-h-fit">
       {/* Breadcrumb navigation */}
       <div>
         <Breadcrumb
@@ -51,7 +51,7 @@ export function ReportsReflectionSheetDetails() {
         </Breadcrumb>
       </div>
 
-      <div className="flex justify-start items-start gap-4 mt-3">
+      <div className="flex justify-start items-start gap-4 mt-3 flex-wrap ">
         <div className="flex flex-col justify-start items-start gap-2">
           <span className="font-bold">
             Completed sessions - <b>20</b>
@@ -73,9 +73,9 @@ export function ReportsReflectionSheetDetails() {
         </div>
 
         <div className="flex flex-col justify-start items-start gap-2">
-          <div className="flex flex-col bg-white w-full h-fit rounded-lg p-4 gap-4">
-            <div className="flex gap-8">
-              <div className="flex">
+          <div className="flex flex-col bg-white w-[250px] sm:w-[800px] h-fit rounded-lg p-4 gap-4">
+            <div className="flex gap-8 flex-wrap">
+              <div className="flex flex-wrap">
                 <span className="text-lg">Total session time :&nbsp;</span>
                 <span className="text-lg font-bold">1hr</span>
               </div>
@@ -84,7 +84,7 @@ export function ReportsReflectionSheetDetails() {
                 <span className="text-lg font-bold">45min</span>
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 overflow-auto w-full">
               <div className="p-4 rounded-md bg-slate-100 flex flex-col ">
                 <span className="text-lg font-bold">20 min</span>
                 <span>Batting</span>
@@ -104,24 +104,24 @@ export function ReportsReflectionSheetDetails() {
             </div>
             <hr className="w-full bg-gray-300 h-[1px]" />
             <span className="font-bold text-left">Player performance</span>
-            <div className="flex gap-3">
-              <div className="border-2 border-blue-300 rounded-md">
+            <div className="flex gap-3 overflow-auto w-full">
+              <div className="w-fit border-2 border-blue-300 rounded-md">
                 <img
-                  className=""
+                  className="w-auto h-auto max-w-none"
                   src="/src/assets/playerPerformance/NeedsImprovement.jpg"
                 />
               </div>
-              <div className="border-2 border-blue-300 rounded-md">
-                <img src="/src/assets/playerPerformance/Satisfactory.jpg" />
+              <div className="w-fit border-2 border-blue-300 rounded-md">
+                <img className="w-auto h-auto max-w-none" src="/src/assets/playerPerformance/Satisfactory.jpg" />
               </div>
-              <div className="border-2 border-blue-300 rounded-md">
-                <img src="/src/assets/playerPerformance/Good.jpg" />
+              <div className="w-fit border-2 border-blue-300 rounded-md">
+                <img className="w-auto h-auto max-w-none" src="/src/assets/playerPerformance/Good.jpg" />
               </div>
-              <div className="border-2 border-blue-700 rounded-md shadow-2xl">
-                <img src="/src/assets/playerPerformance/Excellent.jpg" />
+              <div className="w-fit border-2 border-blue-700 rounded-md shadow-2xl">
+                <img className="w-auto h-auto max-w-none" src="/src/assets/playerPerformance/Excellent.jpg" />
               </div>
-              <div className="border-2 border-blue-300 rounded-md">
-                <img src="/src/assets/playerPerformance/Outstanding.jpg" />
+              <div className="w-fit border-2 border-blue-300 rounded-md">
+                <img className="w-auto h-auto max-w-none" src="/src/assets/playerPerformance/Outstanding.jpg" />
               </div>
             </div>
             <hr className="w-full bg-gray-300 h-[1px] mt-2" />
@@ -131,8 +131,8 @@ export function ReportsReflectionSheetDetails() {
               Voluptate, ipsum quidem ducimus excepturi deleniti, repellat
               aliquam unde facilis doloremque quasi eius possimus fuga! Vero.
             </span>
-            <ReactAudioPlayer src="" controls style={{ width: "100%" }} />
-            <ReactAudioPlayer src="" controls style={{ width: "100%" }} />
+            <ReactAudioPlayer src="" controls className="w-[220px] md:w-full"  />
+            <ReactAudioPlayer src="" controls className="w-[220px] md:w-full" />
             <span className="text-sm font-bold text-left">Bowling</span>
             <span className="text-left text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

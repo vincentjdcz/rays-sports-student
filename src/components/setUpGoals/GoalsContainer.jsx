@@ -1,10 +1,10 @@
-import CoachesContainerCard from "../coaches/CoachesContainerCard";
-import Searchbar from "../searchbar/Searchbar";
+
 import GoalsContainerCard from "./GoalsContainerCard";
 
-export function GoalsContainer() {
+// eslint-disable-next-line react/prop-types
+export function GoalsContainer({handleGoalClick}) {
   return (
-    <div className="w-[30%] h-full rounded-md bg-slate-50 p-1 ml-4">
+    <div className=" w-full sm:w-[30%] h-full rounded-md bg-slate-50 p-1 ml-4">
       <div className="flex justify-start w-full">
         {/*Make this button reusable */}
         <div className="pt-2 relative mx-auto text-gray-600 w-full ml-6 pr-4">
@@ -33,9 +33,9 @@ export function GoalsContainer() {
           </div>
         </div>
 
-        <GoalsContainerCard />
-        <GoalsContainerCard />
-        <GoalsContainerCard />
+        <GoalsContainerCard handleGoalClick={handleGoalClick} />
+        <GoalsContainerCard handleGoalClick={handleGoalClick}/>
+        <GoalsContainerCard handleGoalClick={handleGoalClick}/>
         {/*For Demo */}
       </div>
     </div>

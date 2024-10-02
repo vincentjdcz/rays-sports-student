@@ -168,13 +168,14 @@ export function ReportSessionReportTabTableRow({courseName, courseDuration, batt
             _focus={{ boxShadow: "none" }}
           />
           <hr className="w-full bg-gray-300 h-[1px]" />
-          <div className="mt-4 flex flex-row justify-end items-center gap-2 p-2">
+          <div className="mt-4 flex flex-row justify-start md:justify-end items-center gap-2 p-2 flex-wrap">
           <Select
           icon={<MdArrowDropDown />}
           placeholder="All Year"
           
           size="md"
           width="2xs"
+          mr={2}
         >
           <option value="coach1">Monthly</option>
           <option value="coach2">Quarterly</option>
@@ -197,6 +198,7 @@ export function ReportSessionReportTabTableRow({courseName, courseDuration, batt
       color="blue.500"
       _hover={{ bg: 'blue.50', borderColor: 'blue.600', color: 'blue.600' }}
       _active={{ bg: 'blue.100', borderColor: 'blue.700' }}
+      mr={2}
     />
           </div>
           <span className="text-left ml-6 mb-4">Completed sessions - <b>26 days</b></span>

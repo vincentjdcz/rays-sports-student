@@ -1,9 +1,9 @@
 import { Button, Icon } from "@chakra-ui/react";
 import { FaThumbsUp } from "react-icons/fa";
 // eslint-disable-next-line react/prop-types
-export function GoalDetailsContainer({handleConfirmGoalCompleteClick}) {
+export function GoalDetailsModal({handleConfirmGoalCompleteClick}) {
   return (
-    <div className="sm:w-[60%] bg-slate-50 ml-3 p-2 hidden sm:block">
+    <div className="sm:w-[60%] bg-slate-50 ml-3 p-2 ">
       <div className="flex items-center justify-between p-2 w-full bg-white rounded-lg flex-wrap gap-2">
         <div className="flex items-center flex-wrap">
           <span className="text-left text-xl font-semibold"> Goal No&nbsp;1&nbsp;|&nbsp;</span>
@@ -52,4 +52,4 @@ export function GoalDetailsContainer({handleConfirmGoalCompleteClick}) {
   );
 }
 
-export default GoalDetailsContainer;
+export default GoalDetailsModal;

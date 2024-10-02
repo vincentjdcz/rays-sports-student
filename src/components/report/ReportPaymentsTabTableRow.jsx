@@ -143,12 +143,12 @@ export function ReportPaymentsTabTableRow({courseName, courseFee, batch, payment
         <ModalOverlay />
         <ModalContent>
           <ModalHeader className="text-black" style={{ fontWeight: 700 }}>
-            <div className="p-4 flex items-center justify-between mr-8">
-              <span className="font-bold text-2xl">Payment details</span>
+            <div className="p-4 flex items-center justify-between mr-8 flex-wrap gap-4">
+              <span className="font-bold text-base sm:text-2xl">Payment details</span>
 
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold">17-6-2024</span>
-                <span>Today date</span>
+              <div className="flex flex-col items-start">
+                <span className="text-base sm:text-2xl font-bold">17-6-2024</span>
+                <span className="text-xs sm:text-base">Today date</span>
               </div>
             </div>
             <ModalCloseButton
@@ -164,7 +164,7 @@ export function ReportPaymentsTabTableRow({courseName, courseFee, batch, payment
           </ModalHeader>
 
           <hr className="w-full bg-gray-300 h-[1px]" />
-          <div className="flex gap-6 items-center px-6">
+          <div className="flex gap-6 items-center px-6 overflow-auto">
             <div className="flex gap-2 items-center justify-start">
               <Avatar
                 size="md"
@@ -173,62 +173,63 @@ export function ReportPaymentsTabTableRow({courseName, courseFee, batch, payment
                 bg="transparent"
                 className="bg-transparent"
               />
-              <span className="text-lg font-semibold">Alice Smith</span>
+              <span className="text-sm sm:text-lg font-semibold">Alice Smith</span>
             </div>
             <div className="h-8 w-[1px] bg-gray-400 my-10" />
             <div className="flex flex-col items-start">
-              <span className="text-xl font-bold">{courseName}</span>
+              <span className="text-base sm:text-xl font-bold">{courseName}</span>
               <span>Course name</span>
             </div>
             <div className="h-8 w-[1px] bg-gray-400 my-10" />
             <div className="flex flex-col items-start">
-              <span className="text-xl font-bold">{batch}</span>
+              <span className="text-base sm:text-xl font-bold">{batch}</span>
               <span>Batch</span>
             </div>
+
           </div>
 
-          <div className="px-8 flex justify-start">
+          <div className="px-8 flex justify-start overflow-auto mt-4">
             <div className="flex gap-6 items-center px-6 bg-blue-100 rounded-lg w-fit">
               <div className="flex flex-col items-start w-40">
-                <span className="text-xl font-bold">{courseFee}</span>
-                <span>Actual course fee</span>
+                <span className="text-base sm:text-xl font-bold">{courseFee}</span>
+                <span className="text-xs sm:text-base">Actual course fee</span>
               </div>
               <div className="h-8 w-[1px] bg-gray-400 my-10" />
-              <div className="flex flex-col items-start w-40">
-                <span className="text-xl font-bold">{paymentType}</span>
-                <span>Payment Type</span>
+              <div className="flex flex-col items-start w-18 sm:w-40">
+                <span className="text-base sm:text-xl font-bold">{paymentType}</span>
+                <span className="text-xs sm:text-base">Payment Type</span>
               </div>
               <div className="h-8 w-[1px] bg-gray-400 my-10" />
-              <div className="flex flex-col items-start w-40">
-                <span className="text-xl font-bold">$300</span>
-                <span>Total course fee</span>
+              <div className="flex flex-col items-start w-18 sm:w-40">
+                <span className="text-base sm:text-xl font-bold">$300</span>
+                <span className="text-xs sm:text-base">Total course fee</span>
               </div>
               <div className="h-8 w-[1px] bg-gray-400 my-10" />
-              <div className="flex flex-col items-start w-40">
-                <span className="text-xl font-bold">$100</span>
-                <span>Paid</span>
+              <div className="flex flex-col items-start w-18 sm:w-40">
+                <span className="text-base sm:text-xl font-bold">$100</span>
+                <span className="text-xs sm:text-base">Paid</span>
               </div>
               <div className="h-8 w-[1px] bg-gray-400 my-10" />
-              <div className="flex flex-col items-start w-40">
-                <span className="text-xl font-bold">$50</span>
-                <span>Balance</span>
+              <div className="flex flex-col items-start w-18 sm:w-40">
+                <span className="text-base sm:text-xl font-bold">$50</span>
+                <span className="text-xs sm:text-base">Balance</span>
               </div>
             </div>
           </div>
 
 
-            <b className="ml-8 my-6 text-2xl">Payment Details</b>
+            <b className="ml-8 my-6 text-base sm:text-2xl">Payment Details</b>
       
           <hr className="w-full bg-gray-300 h-[1px]" />
           <TableContainer className="mt-4">
-            <Table>
+            <Table className="text-xs sm:text-base">
               <Thead>
                 <Tr>
-                  <Th>SL</Th>
-                  <Th>Payment required date</Th>
-                  <Th>Payment date</Th>
-                  <Th>Payment amount</Th>
-                  <Th>Payment status</Th>
+                  <Th className="text-xs md:text-base !important">SL</Th>
+                  <Th className="text-xs md:text-base !important">Payment required date</Th>
+                  <Th className="text-xs md:text-base !important">Payment date</Th>
+                  <Th className="text-xs md:text-base !important">Payment amount</Th>
+                  <Th className="text-xs md:text-base !important">Payment status</Th>
                 </Tr>
               </Thead>
               <Tbody>

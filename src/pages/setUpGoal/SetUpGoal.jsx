@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { Select, Textarea } from "@chakra-ui/react";
 import { useState } from "react";
+import GoalDetailsModal from "../../components/setUpGoals/GoalDetailsModal";
 export function SetUpGoal() {
   const [isSetUpNewGoalModalOpen, setIsSetUpNewGoalModalOpen] = useState(false);
 
@@ -36,16 +37,28 @@ export function SetUpGoal() {
     setIsConfirmGoalCompleteModalOpen(false);
   };
 
+  const [isGoalDetailsModalOpen, setIsGoalDetailsModalOpen] = useState(false);
+
+  const handleGoalClick = () => {
+    console.log("Goal Clicked!")
+    setIsGoalDetailsModalOpen(true);
+  };
+
+  const handleCloseGoalDetailsModal = () => {
+    setIsGoalDetailsModalOpen(false);
+  };
+
   return (
     <>
       <div className="w-full h-full">
-        <div className="w-full flex justify-between items-center p-4">
-          <span className="font-bold text-2xl flex flex-start m-5">
+        <div className="w-full flex justify-between items-center p-4 flex-wrap">
+          <span className="font-bold text-2xl flex flex-start m-5 text-left">
             Set up Goal
           </span>
           <Button
             colorScheme="blue"
-            className="w-[15%] mt-4"
+            className="min-w-[190px] w-[200px] mt-0 ml-5 sm:ml-0 sm:mt-4 text-xs sm:text-base"
+            fontSize={["xs", "md"]}
             onClick={handleSetUpNewGoalClick}
           >
             Set up New Goal
@@ -53,7 +66,8 @@ export function SetUpGoal() {
         </div>
 
         <div className="flex h-full">
-          <GoalsContainer />
+          <GoalsContainer
+           handleGoalClick={handleGoalClick} />
           <GoalDetailsContainer
             handleConfirmGoalCompleteClick={handleConfirmGoalCompleteClick}
           />
@@ -214,6 +228,43 @@ export function SetUpGoal() {
           </ModalFooter>
         </ModalContent>
       </Modal>
+
+
+
+      <Modal
+        isOpen={isGoalDetailsModalOpen}
+        onClose={handleCloseGoalDetailsModal}
+        size="2xl"
+      >
+        <ModalOverlay />
+        <ModalContent>
+        <ModalCloseButton
+            border="2px"
+            borderColor="gray.300"
+            borderRadius="full"
+            background="gray.200"
+            color="black"
+            _hover={{ background: "gray.300" }}
+            _focus={{ boxShadow: "none" }}
+          />
+          <hr className="w-full bg-gray-300 h-[1px]" />
+          <div className="w-full p-3 flex flex-col items-center gap-4">
+            
+          <GoalDetailsModal
+            handleConfirmGoalCompleteClick={handleConfirmGoalCompleteClick}
+          />
+          </div>
+          <ModalBody>
+          
+          </ModalBody>
+       
+        </ModalContent>
+      </Modal>
+
+
+
+
+      
     </>
   );
 }

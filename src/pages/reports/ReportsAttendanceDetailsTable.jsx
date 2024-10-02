@@ -36,8 +36,8 @@ export function ReportsAttendanceDetailsTable(){
             <Table tableLayout="fixed">
               <Thead>
                 <Tr bg="white">
-                  <Th fontSize="lg" minWidth="100px" width="200px">Date</Th>
-                  <Th fontSize="lg" minWidth="100px" width="200px">Status</Th>
+                  <Th fontSize={{ base: "sm", md: "lg" }} minWidth="100px" width="200px">Date</Th>
+                  <Th fontSize={{ base: "sm", md: "lg" }} minWidth="100px" width="200px">Status</Th>
                 </Tr>
               </Thead>
               <Tbody>

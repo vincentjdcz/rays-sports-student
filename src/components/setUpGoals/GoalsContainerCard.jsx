@@ -1,6 +1,7 @@
-export function GoalsContainerCard() {
+// eslint-disable-next-line react/prop-types
+export function GoalsContainerCard({handleGoalClick}) {
   return (
-    <div className="w-[90%] flex flex-col rounded-md border-b-2 border-gray-200 p-2">
+    <div onClick={handleGoalClick} className="w-[90%] flex flex-col rounded-md border-b-2 border-gray-200 p-2 hover:bg-blue-100 cursor-pointer">
       <div className="flex justify-start">
         <span className="font-semibold">Goal No 2</span>
       </div>
